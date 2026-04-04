@@ -1,127 +1,171 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mohamed Website</title>
-<style>
-body {
-    margin: 0;
-    font-family: Arial;
-    direction: rtl;
-    background: #0a0a0a;
-    color: white;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed Website | Cybersecurity Engineer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            direction: rtl;
+            background: #0a0a0a;
+            color: white;
+            scroll-behavior: smooth;
+        }
 
-.hero {
-    height: 300px;
-    background: url('images/banner.jpg') center/cover no-repeat;
-    position: relative;
-}
+        .hero {
+            height: 300px;
+            background: url('images/banner.jpg') center/cover no-repeat;
+            position: relative;
+        }
 
-.overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.6);
-}
+        .overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+        }
 
-.profile {
-    text-align: center;
-    margin-top: -80px;
-    animation: fadeUp 1.2s ease;
-}
+        .profile {
+            text-align: center;
+            margin-top: -80px;
+            position: relative;
+            z-index: 1;
+            animation: fadeUp 1.2s ease;
+        }
 
-.profile img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 4px solid #00bcd4;
-    object-fit: contain;
-    box-shadow: 0 0 20px #00bcd4, 0 0 40px #00bcd4;
-    animation: glow 2s infinite alternate;
-}
+        .profile img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 4px solid #00bcd4;
+            object-fit: cover;
+            object-position: center 20%;
+            box-shadow: 0 0 20px #00bcd4;
+            animation: glow 2s infinite alternate;
+        }
 
-@keyframes glow {
-    from { box-shadow: 0 0 10px #00bcd4; }
-    to { box-shadow: 0 0 30px #00bcd4, 0 0 60px #00bcd4; }
-}
+        @keyframes glow {
+            from { box-shadow: 0 0 10px #00bcd4; }
+            to { box-shadow: 0 0 30px #00bcd4, 0 0 50px #00bcd4; }
+        }
 
-.bio {
-    max-width: 600px;
-    margin: 20px auto;
-    background: rgba(255,255,255,0.05);
-    padding: 20px;
-    border-radius: 10px;
-}
+        .bio {
+            max-width: 600px;
+            margin: 20px auto;
+            background: rgba(255,255,255,0.05);
+            padding: 25px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
 
-.name {
-    font-size: 28px;
-    font-weight: bold;
-    background: linear-gradient(90deg,#00bcd4,#00ffcc);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: slideText 3s infinite alternate;
-}
+        .name {
+            font-size: 32px;
+            font-weight: bold;
+            background: linear-gradient(90deg,#00bcd4,#00ffcc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
-@keyframes slideText {
-    from { letter-spacing: 1px; }
-    to { letter-spacing: 4px; }
-}
+        .social {
+            margin-top: 15px;
+        }
 
-.social {
-    margin-top: 10px;
-}
+        .social a {
+            margin: 0 12px;
+            color: white;
+            font-size: 24px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
 
-.social a {
-    margin: 0 10px;
-    color: white;
-    font-size: 20px;
-    text-decoration: none;
-    transition: 0.3s;
-}
+        .social a:hover {
+            color: #00bcd4;
+            transform: scale(1.2);
+        }
 
-.social a:hover {
-    color: #00bcd4;
-}
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #111;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 2px solid #00bcd4;
+        }
 
-nav {
-    display: flex;
-    justify-content: center;
-    background: #111;
-}
+        nav a {
+            color: white;
+            padding: 15px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
 
-nav a {
-    color: white;
-    padding: 15px;
-    text-decoration: none;
-}
+        nav a:hover {
+            background: #00bcd4;
+            color: black;
+        }
 
-section {
-    padding: 40px;
-}
+        section {
+            padding: 60px 20px;
+            max-width: 900px;
+            margin: auto;
+        }
 
-.card {
-    background: rgba(255,255,255,0.05);
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
+        .card {
+            background: rgba(255,255,255,0.05);
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            border-right: 5px solid #00bcd4;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-.whatsapp-btn {
-    display: inline-block;
-    background: #25D366;
-    padding: 10px 15px;
-    border-radius: 8px;
-    text-decoration: none;
-    color: white;
-}
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 188, 212, 0.2);
+        }
 
-@keyframes fadeUp {
-    from {opacity:0; transform:translateY(30px)}
-    to {opacity:1; transform:translateY(0)}
-}
-</style>
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .whatsapp-btn { background: #25D366; }
+        .cv-btn { background: #555; margin-right: 10px; }
+
+        input, button {
+            padding: 12px;
+            border-radius: 5px;
+            border: none;
+            margin: 5px 0;
+        }
+
+        #strength-bar {
+            height: 8px;
+            width: 0%;
+            margin: 10px 0;
+            border-radius: 4px;
+            transition: 0.5s;
+        }
+
+        @keyframes fadeUp {
+            from {opacity:0; transform:translateY(30px)}
+            to {opacity:1; transform:translateY(0)}
+        }
+    </style>
 </head>
 <body>
 
@@ -130,54 +174,99 @@ section {
 </div>
 
 <div class="profile">
-    <img src="images/profile.jpg" alt="Profile">
+    <img src="images/profile.jpg" alt="Mohamed Profile">
     <div class="bio">
         <div class="name">Mohamed Al-Imam</div>
-        <p>Cybersecurity Engineer متخصص في الأمن السيبراني وتطوير الأدوات، مهتم بالبرمجة وخاصة Python.</p>
+        <p><i class="fas fa-shield-alt"></i> Cybersecurity Engineer متخصص في الأمن السيبراني وتطوير الأدوات.</p>
+        
         <div class="social">
-            <a href="#">🌐</a>
-            <a href="#">💻</a>
-            <a href="https://wa.me/249993970277" target="_blank">📱</a>
+            <a href="https://wa.me/249125561790" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://github.com/mohammedcista-lang" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fas fa-globe"></i></a>
+        </div>
+
+        <div style="margin-top: 20px;">
+            <a href="https://wa.me/249125561790" class="btn whatsapp-btn"><i class="fab fa-whatsapp"></i> تواصل معي</a>
+            <a href="#" class="btn cv-btn"><i class="fas fa-file-pdf"></i> السيرة الذاتية</a>
         </div>
     </div>
 </div>
 
 <nav>
     <a href="#about">تعريف</a>
-    <a href="#python">Python</a>
     <a href="#tools">أدوات</a>
-    <a href="#blog">مدونة</a>
+    <a href="#contact">اتصال</a>
 </nav>
 
 <section id="about">
     <div class="card">
-        <h2>📌 البيانات الشخصية</h2>
+        <h2><i class="fas fa-user-circle"></i> البيانات الشخصية</h2>
         <p><b>الاسم:</b> Mohamed Al-Imam Al-Haj Bashir</p>
         <p><b>التعليم:</b> Chemical Engineering - SUST</p>
-        <p><b>المهنة:</b> Cybersecurity Engineer</p>
+        <p><b>التخصص:</b> Cybersecurity & Python Tooling</p>
     </div>
 </section>
 
 <section id="tools">
     <div class="card">
-        <h2>🔐 Password Generator</h2>
-        <input type="number" id="length" placeholder="عدد الأحرف">
-        <button onclick="generatePassword()">توليد</button>
-        <p id="result"></p>
+        <h2><i class="fas fa-lock"></i> Password Generator Pro</h2>
+        <p>قم بتوليد كلمة سر قوية وفحص مدى تعقيدها:</p>
+        <input type="number" id="length" value="12" min="6" max="30" style="width: 100px;">
+        <button onclick="generatePassword()" style="background: #00bcd4; color: black; font-weight: bold;">توليد الآن</button>
+        
+        <div style="background: #222; padding: 15px; margin-top: 15px; border-radius: 8px;">
+            <code id="result" style="font-size: 1.2em; color: #00ffcc;">كلمة السر ستظهر هنا...</code>
+        </div>
+        
+        <div id="strength-bar"></div>
+        <small id="strength-text"></small>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="card">
+        <h2><i class="fas fa-paper-plane"></i> راسلني مباشرة</h2>
+        <p>يمكنك إرسال رسالة بريد إلكتروني سريعة من هنا:</p>
+        <form>
+            <input type="email" placeholder="بريدك الإلكتروني" style="width: 100%; box-sizing: border-box;">
+            <textarea placeholder="رسالتك" style="width: 100%; height: 100px; padding: 10px; margin: 10px 0; border-radius: 5px;"></textarea>
+            <button type="button" class="btn" style="background: #00bcd4; width: 100%;">إرسال الرسالة</button>
+        </form>
     </div>
 </section>
 
 <script>
 function generatePassword() {
-    let length = document.getElementById("length").value;
-    let chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*";
+    let length = document.getElementById("length").value || 12;
+    let chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+";
     let password = "";
     for (let i = 0; i < length; i++) {
         password += chars.charAt(Math.floor(Math.random() * chars.length));
     }
     document.getElementById("result").innerText = password;
+
+    // فحص قوة كلمة السر
+    let bar = document.getElementById("strength-bar");
+    let text = document.getElementById("strength-text");
+    
+    if (length < 8) {
+        bar.style.width = "30%";
+        bar.style.backgroundColor = "#ff4444";
+        text.innerText = "القوة: ضعيفة ❌";
+    } else if (length < 12) {
+        bar.style.width = "60%";
+        bar.style.backgroundColor = "#ffbb33";
+        text.innerText = "القوة: متوسطة ⚠️";
+    } else {
+        bar.style.width = "100%";
+        bar.style.backgroundColor = "#00c851";
+        text.innerText = "القوة: قوية جداً ✅";
+    }
 }
+
+// توليد كلمة سر عند تحميل الصفحة تلقائياً
+window.onload = generatePassword;
 </script>
 
 </body>
-</html
+</html>
