@@ -122,6 +122,7 @@
             margin-bottom: 5px;
             text-shadow: 0 0 15px rgba(106, 27, 41, 0.3);
             letter-spacing: 1px;
+            word-break: break-word;
         }
 
         .title-tag {
@@ -480,6 +481,20 @@
             }
         }
 
+        /* تعديلات استجابة الشاشات الصغيرة للموبايل */
+        @media (max-width: 576px) {
+            .name {
+                font-size: 1.6rem;
+                letter-spacing: 0.5px;
+            }
+            .title-tag {
+                font-size: 0.85rem;
+            }
+            .bio-card {
+                padding: 20px 15px;
+            }
+        }
+
         footer {
             text-align: center;
             padding: 40px;
@@ -521,7 +536,6 @@
                 <a href="https://www.facebook.com/share/1Ddg2BNkfh/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
                 <a href="https://www.instagram.com/mohammed_imam_alhaj?dlrf=MWJ5OW5yeXVmdWx2dg==" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
                 <a href="https://wa.me/249993970277?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8b%20%D9%85%D8%AD%D9%85%D8%AF%D8%8C%20%D8%A7%D8%B7%D9%84%D8%B9%D8%AA%20%D8%B9%D9%84%D9%89%20%D9%85%D8%B9%D8%B1%D8%B6%20%D8%A3%D8%B9%D9%85%D8%A7%D9%84%D9%83%20%D9%88%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D9%85%D8%B4%D8%B1%D9%88%D8%B9..." target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                <a href="https://github.com/mohammedcista-lang" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
                 <a href="#contact" title="Email"><i class="fas fa-envelope"></i></a>
             </div>
 
