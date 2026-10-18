@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohamed Al-Imam | Cybersecurity Engineer & Developer</title>
+    <title>Mohamed Al-Imam | Cybersecurity Engineer</title>
 
     <!-- Meta Tags -->
-    <meta property="og:title" content="Mohamed Al-Imam | Cybersecurity Engineer">
-    <meta property="og:description" content="مهندس أمن سيبراني ومطور أدوات بلغة Python. تصفح أدواتي البرمجية ومشاريعي التقنية.">
+    <meta property="og:title" content="MOHAMED AL-IMAM | CYBERSECURITY ENGINEER">
+    <meta property="og:description" content="Cybersecurity Engineer & Python Developer Portfolio.">
     <meta property="og:image" content="https://mohammedcista-lang.github.io/Mywebsite-/images/Moimam.png">
     <meta property="og:url" content="https://mohammedcista-lang.github.io/Mywebsite-/">
     <meta property="og:type" content="website">
@@ -22,11 +22,12 @@
             --card-bg: #ffffff;
             --text-main: #1e293b;
             --text-muted: #64748b;
-            --suit-color: #6A1B29; /* لون البدلة (العنابي/الماروني) */
+            --suit-color: #6A1B29; /* لون البدلة */
             --suit-hover: #52131f;
             --border-color: #e2e8f0;
             --gray-light: #f8fafc;
-            --glow-suit: 0 0 20px rgba(106, 27, 41, 0.25);
+            --glow-suit: 0 0 25px rgba(106, 27, 41, 0.4), 0 10px 30px rgba(0,0,0,0.1);
+            --shadow-card: 0 10px 35px rgba(106, 27, 41, 0.08), 0 4px 15px rgba(0,0,0,0.05);
         }
 
         * {
@@ -54,8 +55,9 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
         }
-        .cyber-status span { color: #38bdf8; }
+        .cyber-status span { color: #38bdf8; text-shadow: 0 0 8px rgba(56, 189, 248, 0.5); }
 
         /* Hero & Header */
         .hero-banner {
@@ -79,6 +81,7 @@
             display: inline-block;
         }
 
+        /* إضافة الإضاءة الخلفية والظل لصورة البروفايل */
         .profile-img {
             width: 170px;
             height: 170px;
@@ -88,6 +91,11 @@
             object-position: center 20%;
             box-shadow: var(--glow-suit);
             background: #fff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .profile-img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0 35px rgba(106, 27, 41, 0.6), 0 15px 40px rgba(0,0,0,0.15);
         }
 
         .bio-card {
@@ -96,7 +104,7 @@
             border-radius: 20px;
             padding: 30px;
             margin-top: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+            box-shadow: var(--shadow-card);
         }
 
         .name {
@@ -104,6 +112,7 @@
             font-weight: 900;
             color: var(--suit-color);
             margin-bottom: 5px;
+            text-shadow: 0 0 12px rgba(106, 27, 41, 0.2);
         }
 
         .title-tag {
@@ -111,6 +120,8 @@
             color: var(--text-muted);
             font-size: 1.05rem;
             margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .social-links {
@@ -120,6 +131,7 @@
             gap: 15px;
         }
 
+        /* إضاءة وظل لأيقونات التواصل */
         .social-links a {
             width: 45px;
             height: 45px;
@@ -133,6 +145,7 @@
             font-size: 1.2rem;
             text-decoration: none;
             transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
         }
 
         .social-links a:hover {
@@ -140,6 +153,7 @@
             color: white;
             transform: translateY(-4px);
             border-color: var(--suit-color);
+            box-shadow: 0 0 15px rgba(106, 27, 41, 0.5);
         }
 
         /* Navigation */
@@ -153,7 +167,7 @@
             z-index: 100;
             margin-top: 30px;
             flex-wrap: wrap;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
         }
 
         nav a {
@@ -164,9 +178,10 @@
             transition: 0.3s;
             position: relative;
             font-size: 0.95rem;
+            text-transform: uppercase;
         }
 
-        nav a:hover, nav a.active { color: var(--suit-color); }
+        nav a:hover, nav a.active { color: var(--suit-color); text-shadow: 0 0 8px rgba(106, 27, 41, 0.3); }
 
         nav a::after {
             content: '';
@@ -188,8 +203,9 @@
             padding: 0 20px;
         }
 
+        /* إضاءة وعناوين بأحرف كبيرة مع ضوء خلفي وظل */
         .section-title {
-            font-size: 1.4rem;
+            font-size: 1.35rem;
             margin-bottom: 20px;
             display: flex;
             align-items: center;
@@ -197,6 +213,9 @@
             color: var(--suit-color);
             border-right: 4px solid var(--suit-color);
             padding-right: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            text-shadow: 0 0 10px rgba(106, 27, 41, 0.2);
         }
 
         .card {
@@ -205,13 +224,13 @@
             border-radius: 16px;
             padding: 25px;
             margin-bottom: 25px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+            box-shadow: var(--shadow-card);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .card:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+            box-shadow: 0 15px 40px rgba(106, 27, 41, 0.12), 0 6px 20px rgba(0,0,0,0.06);
         }
 
         /* Buttons */
@@ -228,12 +247,28 @@
             cursor: pointer;
             font-family: 'Cairo', sans-serif;
             font-size: 0.95rem;
+            text-transform: uppercase;
         }
 
-        .btn-suit { background: var(--suit-color); color: white; }
-        .btn-suit:hover { background: var(--suit-hover); box-shadow: var(--glow-suit); }
-        .btn-wa { background: #25D366; color: white; }
-        .btn-wa:hover { background: #20ba5a; }
+        .btn-suit { 
+            background: var(--suit-color); 
+            color: white; 
+            box-shadow: 0 4px 15px rgba(106, 27, 41, 0.3);
+        }
+        .btn-suit:hover { 
+            background: var(--suit-hover); 
+            box-shadow: 0 0 20px rgba(106, 27, 41, 0.6); 
+        }
+
+        .btn-wa { 
+            background: #25D366; 
+            color: white; 
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+        .btn-wa:hover { 
+            background: #20ba5a; 
+            box-shadow: 0 0 20px rgba(37, 211, 102, 0.5); 
+        }
 
         /* Stats Counter Section */
         .stats-grid {
@@ -248,6 +283,12 @@
             border-radius: 12px;
             padding: 20px;
             text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+            transition: 0.3s;
+        }
+        .stat-card:hover {
+            box-shadow: 0 0 15px rgba(106, 27, 41, 0.15);
+            border-color: var(--suit-color);
         }
         .stat-number {
             font-size: 2rem;
@@ -255,6 +296,7 @@
             color: var(--suit-color);
             font-family: 'Fira Code', monospace;
             margin-bottom: 5px;
+            text-shadow: 0 0 10px rgba(106, 27, 41, 0.2);
         }
 
         /* Services Section */
@@ -274,6 +316,7 @@
         .service-card:hover {
             border-color: var(--suit-color);
             transform: translateY(-3px);
+            box-shadow: 0 0 20px rgba(106, 27, 41, 0.12);
         }
 
         /* Projects Grid */
@@ -297,6 +340,7 @@
         .project-card:hover {
             border-color: var(--suit-color);
             transform: translateY(-3px);
+            box-shadow: 0 0 20px rgba(106, 27, 41, 0.12);
         }
 
         /* Skills Grid */
@@ -317,12 +361,14 @@
             font-size: 0.9rem;
             transition: 0.3s;
             color: var(--text-main);
+            text-transform: uppercase;
         }
 
         .skill-badge:hover {
             border-color: var(--suit-color);
             color: var(--suit-color);
             background: #fff;
+            box-shadow: 0 0 15px rgba(106, 27, 41, 0.2);
         }
 
         /* Inputs & Terminal */
@@ -340,7 +386,7 @@
         }
         input:focus, textarea:focus {
             border-color: var(--suit-color);
-            box-shadow: 0 0 8px rgba(106, 27, 41, 0.15);
+            box-shadow: 0 0 12px rgba(106, 27, 41, 0.25);
         }
 
         .terminal-box {
@@ -351,6 +397,7 @@
             padding: 20px;
             margin-top: 15px;
             color: #f8fafc;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
         .terminal-header { display: flex; gap: 8px; margin-bottom: 12px; }
         .t-dot { width: 12px; height: 12px; border-radius: 50%; }
@@ -364,6 +411,7 @@
             line-height: 1.6;
             max-height: 180px;
             overflow-y: auto;
+            text-shadow: 0 0 5px rgba(74, 222, 128, 0.4);
         }
         .terminal-input-line {
             display: flex;
@@ -390,6 +438,7 @@
             border-top: 1px solid var(--border-color);
             margin-top: 60px;
             background: #ffffff;
+            box-shadow: 0 -4px 15px rgba(0,0,0,0.02);
         }
     </style>
 </head>
@@ -398,7 +447,7 @@
     <!-- Cyber Status Bar -->
     <div class="cyber-status">
         <div>SYS_STATUS: <span id="sys-status">ONLINE & SECURE</span></div>
-        <div>HOST: mohammedcista.io</div>
+        <div>HOST: MOHAMMEDCISTA.IO</div>
     </div>
 
     <!-- Hero Banner -->
@@ -407,12 +456,12 @@
     <!-- Profile Section -->
     <div class="profile-container">
         <div class="avatar-wrapper">
-            <img src="images/Moimam.png" alt="Mohamed Al-Imam" class="profile-img">
+            <img src="images/Moimam.png" alt="Mohamed Al-Imam" class="profile-img" onerror="this.onerror=null; this.src='images/Moimam.jpg';">
         </div>
         
         <div class="bio-card">
-            <div class="name">Mohamed Al-Imam</div>
-            <div class="title-tag">&lt; Cybersecurity Engineer & Developer /&gt;</div>
+            <div class="name">MOHAMED AL-IMAM</div>
+            <div class="title-tag">&lt; CYBERSECURITY ENGINEER & DEVELOPER /&gt;</div>
             <p style="color: var(--text-muted); line-height: 1.8; max-width: 650px; margin: 0 auto;">
                 مهندس أمن سيبراني ومطور ويب وتطبيقات. متخصص في تطوير الأدوات البرمجية الذكية بلغة Python، تصميم المنصات، وحل المشكلات التقنية بكفاءة عالية.
             </p>
@@ -448,7 +497,7 @@
             <h2 class="section-title"><i class="fas fa-id-card"></i> البيانات الشخصية والأكاديمية</h2>
             <p style="margin: 10px 0;"><b>الاسم الكامل:</b> Mohamed Al-Imam Al-Haj Bashir</p>
             <p style="margin: 10px 0;"><b>التعليم:</b> هندسة كيميائية - جامعة السودان للعلوم والتكنولوجيا (SUST)</p>
-            <p style="margin: 10px 0;"><b>التخصص التقني:</b> Cybersecurity Engineering & Full-Stack / Python Development</p>
+            <p style="margin: 10px 0;"><b>التخصص التقني:</b> CYBERSECURITY ENGINEERING & PYTHON DEVELOPMENT</p>
         </div>
     </section>
 
@@ -462,7 +511,7 @@
                     <div style="color: var(--text-muted); font-size: 0.9rem;">مشاريع ومنصات مكتملة</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number">Python</div>
+                    <div class="stat-number">PYTHON</div>
                     <div style="color: var(--text-muted); font-size: 0.9rem;">اللغة والأساس البرمجي</div>
                 </div>
                 <div class="stat-card">
@@ -523,7 +572,7 @@
                         <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">موقع إلكتروني متكامل لخدمات الحجوزات والسفر وتخليص الإجراءات والمعاملات.</p>
                     </div>
                     <div style="margin-top: 15px;">
-                        <span style="font-size: 0.8rem; font-family: 'Fira Code', monospace; color: var(--suit-color);">Travel & Booking Platform</span>
+                        <span style="font-size: 0.8rem; font-family: 'Fira Code', monospace; color: var(--suit-color);">TRAVEL & BOOKING PLATFORM</span>
                         <a href="https://mohammedcista-lang.github.io/Azmi-travel/" target="_blank" class="btn" style="background: var(--gray-light); color: var(--text-main); border: 1px solid var(--border-color); font-size: 0.85rem; padding: 6px 12px; margin-top: 10px; width: 100%; justify-content: center;"><i class="fas fa-external-link-alt"></i> معاينة الموقع</a>
                     </div>
                 </div>
@@ -535,7 +584,7 @@
                         <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">موقع رسمي لشركة بروميس لتنظيم التخاريج والكرنفالات والفعاليات الكبرى.</p>
                     </div>
                     <div style="margin-top: 15px;">
-                        <span style="font-size: 0.8rem; font-family: 'Fira Code', monospace; color: var(--suit-color);">Events & Festivals</span>
+                        <span style="font-size: 0.8rem; font-family: 'Fira Code', monospace; color: var(--suit-color);">EVENTS & FESTIVALS</span>
                         <a href="https://mohammedcista-lang.github.io/promise-events/" target="_blank" class="btn" style="background: var(--gray-light); color: var(--text-main); border: 1px solid var(--border-color); font-size: 0.85rem; padding: 6px 12px; margin-top: 10px; width: 100%; justify-content: center;"><i class="fas fa-external-link-alt"></i> معاينة الموقع</a>
                     </div>
                 </div>
@@ -548,11 +597,11 @@
         <div class="card">
             <h2 class="section-title"><i class="fas fa-microchip"></i> المهارات التقنية (Tech Stack)</h2>
             <div class="skills-grid">
-                <div class="skill-badge"><i class="fab fa-python"></i> Python</div>
-                <div class="skill-badge"><i class="fas fa-shield-alt"></i> Cybersecurity</div>
-                <div class="skill-badge"><i class="fab fa-linux"></i> Linux / Termux</div>
-                <div class="skill-badge"><i class="fas fa-network-wired"></i> Nmap & Networking</div>
-                <div class="skill-badge"><i class="fab fa-git-alt"></i> Git & GitHub</div>
+                <div class="skill-badge"><i class="fab fa-python"></i> PYTHON</div>
+                <div class="skill-badge"><i class="fas fa-shield-alt"></i> CYBERSECURITY</div>
+                <div class="skill-badge"><i class="fab fa-linux"></i> LINUX / TERMUX</div>
+                <div class="skill-badge"><i class="fas fa-network-wired"></i> NMAP & NETWORKING</div>
+                <div class="skill-badge"><i class="fab fa-git-alt"></i> GIT & GITHUB</div>
                 <div class="skill-badge"><i class="fas fa-code"></i> HTML5 / CSS3</div>
             </div>
         </div>
@@ -562,7 +611,7 @@
     <section id="tools">
         <!-- Password Generator Pro -->
         <div class="card">
-            <h2 class="section-title"><i class="fas fa-lock"></i> Password Generator Pro</h2>
+            <h2 class="section-title"><i class="fas fa-lock"></i> PASSWORD GENERATOR PRO</h2>
             <p style="color: var(--text-muted); margin-bottom: 15px;">قم بتوليد كلمات مرور مشفرة وعالية القوة مع فحص تعقيدها لحظياً:</p>
             
             <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
@@ -584,7 +633,7 @@
 
         <!-- Base64 Encoder / Decoder Tool -->
         <div class="card">
-            <h2 class="section-title"><i class="fas fa-exchange-alt"></i> Base64 Encoder & Decoder</h2>
+            <h2 class="section-title"><i class="fas fa-exchange-alt"></i> BASE64 ENCODER & DECODER</h2>
             <p style="color: var(--text-muted); margin-bottom: 15px;">أداة ترميز وفك تشفير النصوص الفورية:</p>
             <textarea id="base64-input" placeholder="اكتب النص هنا..." oninput="processBase64()" style="height: 80px; resize: none;"></textarea>
             
@@ -604,7 +653,7 @@
     <!-- Terminal Simulator Section -->
     <section id="terminal-sec">
         <div class="card">
-            <h2 class="section-title"><i class="fas fa-terminal"></i> Interactive CLI Simulator</h2>
+            <h2 class="section-title"><i class="fas fa-terminal"></i> INTERACTIVE CLI SIMULATOR</h2>
             <p style="color: var(--text-muted); margin-bottom: 10px;">اكتب أوامر مثل `help`, `bio`, `skills`, `projects`, `services`, `clear`, أو `date`:</p>
             <div class="terminal-box">
                 <div class="terminal-header">
