@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohamed Al-Imam | Cybersecurity Engineer</title>
+    <title>MOHAMED AL-IMAM | CYBERSECURITY ENGINEER</title>
 
     <!-- Meta Tags -->
     <meta property="og:title" content="MOHAMED AL-IMAM | CYBERSECURITY ENGINEER">
     <meta property="og:description" content="Cybersecurity Engineer & Python Developer Portfolio.">
-    <meta property="og:image" content="https://mohammedcista-lang.github.io/Mywebsite-/images/Moimam.png">
+    <meta property="og:image" content="https://mohammedcista-lang.github.io/Mywebsite-/Moimam.png">
     <meta property="og:url" content="https://mohammedcista-lang.github.io/Mywebsite-/">
     <meta property="og:type" content="website">
 
     <!-- FontAwesome & Google Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Fira+Code:wght@400;600;700&display=swap" rel="stylesheet">
 
     <style>
         :root {
@@ -26,7 +26,7 @@
             --suit-hover: #52131f;
             --border-color: #e2e8f0;
             --gray-light: #f8fafc;
-            --glow-suit: 0 0 25px rgba(106, 27, 41, 0.4), 0 10px 30px rgba(0,0,0,0.1);
+            --glow-suit: 0 0 30px rgba(106, 27, 41, 0.45), 0 10px 30px rgba(0,0,0,0.12);
             --shadow-card: 0 10px 35px rgba(106, 27, 41, 0.08), 0 4px 15px rgba(0,0,0,0.05);
         }
 
@@ -44,20 +44,28 @@
             overflow-x: hidden;
         }
 
-        /* Top System Status Bar */
+        /* Top System Status Bar - مكبرة، بإضاءة وظلال ساطعة */
         .cyber-status {
             background: #0f172a;
-            color: #e2e8f0;
-            border-bottom: 1px solid var(--border-color);
-            padding: 8px 20px;
+            color: #f8fafc;
+            border-bottom: 2px solid var(--suit-color);
+            padding: 12px 25px;
             font-family: 'Fira Code', monospace;
-            font-size: 0.85rem;
+            font-size: 1rem;
+            font-weight: 700;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            text-transform: uppercase;
+            text-shadow: 0 0 12px rgba(106, 27, 41, 0.9), 0 0 8px rgba(56, 189, 248, 0.8);
+            box-shadow: 0 4px 25px rgba(106, 27, 41, 0.4);
+            letter-spacing: 1.5px;
         }
-        .cyber-status span { color: #38bdf8; text-shadow: 0 0 8px rgba(56, 189, 248, 0.5); }
+        .cyber-status span { 
+            color: #38bdf8; 
+            text-shadow: 0 0 15px rgba(56, 189, 248, 1); 
+            font-weight: 900;
+        }
 
         /* Hero & Header */
         .hero-banner {
@@ -81,7 +89,7 @@
             display: inline-block;
         }
 
-        /* إضافة الإضاءة الخلفية والظل لصورة البروفايل */
+        /* إضاءة خلفية وظل قوي جداً لصورة البروفايل */
         .profile-img {
             width: 170px;
             height: 170px;
@@ -94,8 +102,8 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .profile-img:hover {
-            transform: scale(1.03);
-            box-shadow: 0 0 35px rgba(106, 27, 41, 0.6), 0 15px 40px rgba(0,0,0,0.15);
+            transform: scale(1.04);
+            box-shadow: 0 0 45px rgba(106, 27, 41, 0.8), 0 15px 50px rgba(0,0,0,0.25);
         }
 
         .bio-card {
@@ -112,7 +120,8 @@
             font-weight: 900;
             color: var(--suit-color);
             margin-bottom: 5px;
-            text-shadow: 0 0 12px rgba(106, 27, 41, 0.2);
+            text-shadow: 0 0 15px rgba(106, 27, 41, 0.3);
+            letter-spacing: 1px;
         }
 
         .title-tag {
@@ -131,7 +140,6 @@
             gap: 15px;
         }
 
-        /* إضاءة وظل لأيقونات التواصل */
         .social-links a {
             width: 45px;
             height: 45px;
@@ -153,7 +161,7 @@
             color: white;
             transform: translateY(-4px);
             border-color: var(--suit-color);
-            box-shadow: 0 0 15px rgba(106, 27, 41, 0.5);
+            box-shadow: 0 0 20px rgba(106, 27, 41, 0.6);
         }
 
         /* Navigation */
@@ -181,7 +189,10 @@
             text-transform: uppercase;
         }
 
-        nav a:hover, nav a.active { color: var(--suit-color); text-shadow: 0 0 8px rgba(106, 27, 41, 0.3); }
+        nav a:hover, nav a.active { 
+            color: var(--suit-color); 
+            text-shadow: 0 0 10px rgba(106, 27, 41, 0.4); 
+        }
 
         nav a::after {
             content: '';
@@ -203,7 +214,7 @@
             padding: 0 20px;
         }
 
-        /* إضاءة وعناوين بأحرف كبيرة مع ضوء خلفي وظل */
+        /* عناوين بأحرف كبيرة مع إضاءة خلفية وظل */
         .section-title {
             font-size: 1.35rem;
             margin-bottom: 20px;
@@ -215,7 +226,7 @@
             padding-right: 12px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            text-shadow: 0 0 10px rgba(106, 27, 41, 0.2);
+            text-shadow: 0 0 10px rgba(106, 27, 41, 0.25);
         }
 
         .card {
@@ -287,7 +298,7 @@
             transition: 0.3s;
         }
         .stat-card:hover {
-            box-shadow: 0 0 15px rgba(106, 27, 41, 0.15);
+            box-shadow: 0 0 18px rgba(106, 27, 41, 0.18);
             border-color: var(--suit-color);
         }
         .stat-number {
@@ -296,7 +307,7 @@
             color: var(--suit-color);
             font-family: 'Fira Code', monospace;
             margin-bottom: 5px;
-            text-shadow: 0 0 10px rgba(106, 27, 41, 0.2);
+            text-shadow: 0 0 10px rgba(106, 27, 41, 0.25);
         }
 
         /* Services Section */
@@ -456,7 +467,8 @@
     <!-- Profile Section -->
     <div class="profile-container">
         <div class="avatar-wrapper">
-            <img src="images/Moimam.png" alt="Mohamed Al-Imam" class="profile-img" onerror="this.onerror=null; this.src='images/Moimam.jpg';">
+            <!-- مسار الصورة في المجلد الرئيسي مباشرة (بدون images/) -->
+            <img src="Moimam.png" alt="Mohamed Al-Imam" class="profile-img" onerror="this.onerror=null; this.src='moimam.png';">
         </div>
         
         <div class="bio-card">
